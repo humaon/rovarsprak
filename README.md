@@ -14,5 +14,5 @@ a.(ii) Run the api endpoint {base_url}/translate/rovarsprak on post method for t
     "text":"HoHelollolo ToThohisos isos hohumomaonon"
    } 
    
-b. (i) Run the api endpoint {base_url}/jokeOfTheDay on get method and will get a random joke translated in rovarsprak
+b. Run the api endpoint {base_url}/jokeOfTheDay on get method and will get a random joke translated in rovarsprak
 
