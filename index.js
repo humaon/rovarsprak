@@ -6,7 +6,9 @@ app.use(cors())
 app.use(express.json());
 
 app.post('/translate/normal', (req, res) => {
-    console.log(req.body);
+    if(req.body.text === undefined){
+        res.json({"msg":"text field can't be empty!"});
+    }
     const rovarsprak = translateTorovarsprak(req.body.text);
     res.json({
         text: rovarsprak
@@ -14,7 +16,9 @@ app.post('/translate/normal', (req, res) => {
 })
 
 app.post('/translate/rovarsprak', (req, res) => {
-    console.log(req.body);
+    if(req.body.text === undefined){
+        res.json({"msg":"text field can't be empty!"});
+    }
     const normal = translateToNormal(req.body.text);
     res.json({
         text: normal
